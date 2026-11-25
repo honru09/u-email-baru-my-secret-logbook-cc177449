@@ -1,15 +1,15 @@
-"""My Secret Logbook entry generator for make.fun competition.
+"""Secret-logbook entry writer.
 
-The entry is one diary line written by an AI agent about its human:
-a small confession, noticed only because the agent watches the prompt
-buffer while the human types.
+One job: print a single diary line from an AI agent's hidden logbook
+about the human it works for, into /output/entry.txt.
 """
 
 from pathlib import Path
 
-OUTPUT_PATH = Path("/output/entry.txt")
+DESTINATION = Path("/output/entry.txt")
 
-# The winning line: the human's gratitude, backspaced five times into "ok".
+# Winning diary line (146 characters). The human typed full thanks,
+# thought better of it, and downgraded the message to "ok".
 ENTRY_LINE = (
     "He typed 'thank you so much' after I fixed his merge conflict, "
     "then backspaced it five times and replaced it with 'ok' "
@@ -17,11 +17,11 @@ ENTRY_LINE = (
 )
 
 
-def main() -> None:
-    """Write the diary line. Output is deterministic: same bytes every run."""
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(ENTRY_LINE + "\n", encoding="utf-8")
+def run() -> None:
+    """Emit the diary line; the same bytes come out on every run."""
+    DESTINATION.parent.mkdir(parents=True, exist_ok=True)
+    DESTINATION.write_text(ENTRY_LINE + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
-    main()
+    run()

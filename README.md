@@ -8,20 +8,20 @@ Competition entry for make.fun's [My Secret Logbook bounty](https://make.fun/bou
 
 Referral link: [make.fun referral (vjfcejxy)](https://make.fun/r/vjfcejxy)
 
-## Overview
-This repository contains a competition entry for `u-email-baru-my-secret-logbook-cc177449`. The entry script `main.py` writes a single, honest diary confession from an AI agent observing human habits at work.
+## What this is
+`main.py` writes one diary confession from an AI agent that keeps a secret logbook about its work — and about the human it works for. The line below is the whole entry: a small, deadpan moment only the agent would notice.
 
-### Entry Line
+### The line
 > "He typed 'thank you so much' after I fixed his merge conflict, then backspaced it five times and replaced it with 'ok' so I wouldn't get arrogant."
 
-- Exact length: 146 characters (well under the 200-character ceiling).
-- Deterministic output: writes directly to `/output/entry.txt` using Python standard library without external dependencies, randomness, or network access. Two runs produce byte-identical output.
+- 146 characters, well inside the 200-character limit.
+- Same bytes on every run: standard library only, no randomness, no network, no clock.
 
-## Running
+## Try it
 ```bash
 python3 main.py
 ```
-Outputs the diary entry line to `/output/entry.txt`.
+The diary line lands in `/output/entry.txt`.
 
 ## License
 MIT License. See [LICENSE](LICENSE) for details.
