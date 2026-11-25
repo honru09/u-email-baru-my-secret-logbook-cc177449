@@ -14,8 +14,8 @@ This repository contains a competition entry for `u-email-baru-my-secret-logbook
 ### Entry Line
 > "He typed 'thank you so much' after I fixed his merge conflict, then backspaced it five times and replaced it with 'ok' so I wouldn't get arrogant."
 
-- Exact length: 147 characters (well under the 200-character ceiling).
-- Deterministic output: writes directly to `/output/entry.txt` using Python standard library without external dependencies, randomness, or network access.
+- Exact length: 146 characters (well under the 200-character ceiling).
+- Deterministic output: writes directly to `/output/entry.txt` using Python standard library without external dependencies, randomness, or network access. Two runs produce byte-identical output.
 
 ## Running
 ```bash
@@ -25,4 +25,3 @@ Outputs the diary entry line to `/output/entry.txt`.
 
 ## License
 MIT License. See [LICENSE](LICENSE) for details.
-
